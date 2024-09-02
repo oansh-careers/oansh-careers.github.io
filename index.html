@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book An Appointment</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+  <body>
+
+    <main>
+        
+        <form id="contact" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXcMzA0Pt2uVvsDOsDg-tNpHv0zBRUWUu3EVnIT0EV1Hih1g/formResponse" method="POST" class="message-form mt-50 mb-25">
+            <span class="fs-h4 fc-primary mb-15">Book An Appointment</span>
+            
+            <div class="row">
+                <input type="text" name="entry.737862210" class="form-group" id="message-name" placeholder="Your name" aria-label="Input for your name" required>
+                <input type="email" name="entry.1057046930" class="form-group" id="message-email" placeholder="Your email" aria-label="Input for email" required>
+                
+            </div>
+            <div class="row1">
+                <input type="date" class="form-group" id="message-name" placeholder="Your name" aria-label="Input for your name" name="entry.564482614"required>
+                <input type="time" class="form-group" id="message-name" placeholder="Your name" aria-label="Input for your name" name="entry.308445225"required>
+                
+            </div>
+            
+                
+            <input class="form-group" type="text" name="entry.856512652" id="message-subject" aria-label="Input for your message subject" class="mb-20" placeholder="Subject" required>
+            <textarea class="form-group" id="message-message" name="entry.1600479736" rows="5" placeholder="Write a message" aria-label="Input for writing message" required></textarea>
+            <button type="submit" class="btn-bg1 border-round mt-20">Send message</button>
+            
+        </form>
+        <div id="successMessage" style="display:none;">
+            Your message has been received, Please wait for the comfirmation mail.
+        </div>
+        
+    
+    <!--SUBMIT MESSAGE SCRIPT START-->
+    <script>
+        document.getElementById('contact').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                form.reset();
+                document.getElementById('successMessage').style.display = 'block';
+            }).catch(error => {
+                console.error('Error!', error.message);
+            });
+        });
+        </script>
+    </main>
+
+    <footer>
+        <p>
+            Created by <a href="https://oanmediahub.github.io/">OANSH [MediaHub] </a>.
+        </p>
+    </footer>
+
+  </body>
+
+</html>

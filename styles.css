@@ -1,0 +1,220 @@
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(to bottom, #3366cc 0%, #ccffff 100%);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+main {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form styles */
+form,
+#successMessage {
+  
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 10px;
+}
+#successMessage{
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    background-color: hsl(169, 82%, 27%);
+}
+form{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+}
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: hsl(187, 24%, 22%);
+}
+span{
+  font-size: 32px;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+.row{
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.row1 input{
+  width: 270px;
+  border-radius: 2px;
+  height: 35px;
+}
+.row1{
+  gap: 10px;
+  display: flex;
+
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 5px;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+
+button {
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover,
+button:focus {
+  background-color: hsl(169, 82%, 22%);
+}
+
+/* Error and success styles */
+.error-message {
+  color: hsl(0, 66%, 54%);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: hsl(0, 66%, 54%);
+}
+
+.successMessage {
+  text-align: center;
+}
+
+.successMessage h2 {
+  color: hsl(169, 82%, 27%);
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  color: hsl(169, 82%, 27%);
+}
+
+footer a {
+  color: hsl(0, 0%, 0%);
+  text-decoration: none;
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: none;
+  color: hsl(169, 82%, 27%);
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  body {
+    padding: 10px;
+  }
+
+  form,
+  #success-message {
+    padding: 20px;
+  }
+  #successMessage {
+    left: 15%;
+    width: 70%;
+  }
+  .radio-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Accessibility focus styles */
+input:focus,
+textarea:focus,
+button:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 2px solid hsl(169, 82%, 27%);
+  outline-offset: 2px;
+}
