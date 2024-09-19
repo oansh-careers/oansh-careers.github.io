@@ -1,4 +1,3 @@
-
 /* Reset and base styles */
 * {
   margin: 0;
@@ -10,9 +9,8 @@ body {
   font-family: "Karla", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: hsl(0, 0%, 100%);
-  background: #fff;
-  background-size: cover;
+  color: #ffffff;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -32,51 +30,60 @@ main {
 /* Form styles */
 form,
 #successMessage {
-  
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   margin-top: 10px;
 }
-#successMessage{
-    position: absolute;
-    left: 30%;
-    width: 40%;
-    background-color: hsl(169, 82%, 27%);
-}
-form{
-    background-color: #030643;
-    backdrop-filter: blur(20px);
-}
-h1 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: hsl(187, 24%, 22%);
-}
-span{
-  font-size: 32px;
+
+#successMessage {
+  position: absolute;
+  left: 30%;
+  width: 40%;
+  background-color: #28a745;
 }
 
+form {
+  background-color: #ffffff;
+  backdrop-filter: blur(20px);
+  border: 1px solid #cccccc;
+}
+
+h1, span {
+  font-size: 32px;
+  color: #1e3c72;
+}
+
+input::placeholder {
+  color: #6c757d;
+}
 
 .form-group {
   margin-bottom: 20px;
 }
-.row{
+
+.row {
   display: flex;
   gap: 10px;
   justify-content: space-between;
 }
-.row1 input{
+
+.row1 input {
   width: 270px;
-  border-radius: 2px;
-  height: 35px;
+  border-radius: 5px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  background-color: #f8f9fa;
+  color: #495057;
 }
-.row1{
+
+.row1 {
   gap: 10px;
   display: flex;
-
 }
+
 label {
   display: block;
   margin-bottom: 5px;
@@ -88,8 +95,10 @@ input[type="email"],
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid hsl(186, 15%, 59%);
+  border: 1px solid #ced4da;
   border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #495057;
   font-family: "Karla", sans-serif;
   font-size: 16px;
 }
@@ -124,10 +133,9 @@ input[type="radio"] {
   margin-right: 5px;
 }
 
-
 button {
-  background-color: hsl(169, 82%, 27%);
-  color: hsl(0, 0%, 100%);
+  background-color: #007bff;
+  color: #ffffff;
   border: none;
   padding: 12px 24px;
   font-size: 18px;
@@ -140,19 +148,19 @@ button {
 
 button:hover,
 button:focus {
-  background-color: hsl(169, 82%, 22%);
+  background-color: #0056b3;
 }
 
 /* Error and success styles */
 .error-message {
-  color: hsl(0, 66%, 54%);
+  color: #dc3545;
   font-size: 14px;
   margin-top: 5px;
 }
 
 input:invalid,
 textarea:invalid {
-  border-color: hsl(0, 66%, 54%);
+  border-color: #dc3545;
 }
 
 .successMessage {
@@ -160,7 +168,7 @@ textarea:invalid {
 }
 
 .successMessage h2 {
-  color: hsl(169, 82%, 27%);
+  color: #28a745;
   margin-bottom: 10px;
 }
 
@@ -173,11 +181,11 @@ footer {
   text-align: center;
   margin-top: 20px;
   font-size: 15px;
-  color: hsl(169, 82%, 27%);
+  color: #ffffff;
 }
 
 footer a {
-  color: hsl(0, 0%, 0%);
+  color: #ffffff;
   text-decoration: none;
   font-weight: bolder;
   transition: color 0.3s ease;
@@ -186,7 +194,7 @@ footer a {
 footer a:hover,
 footer a:focus {
   text-decoration: none;
-  color: hsl(169, 82%, 27%);
+  color: #ffdd57;
 }
 
 /* Responsive design */
@@ -199,10 +207,12 @@ footer a:focus {
   #success-message {
     padding: 20px;
   }
+
   #successMessage {
     left: 15%;
     width: 70%;
   }
+
   .radio-group {
     flex-direction: column;
     gap: 10px;
@@ -215,6 +225,6 @@ textarea:focus,
 button:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: 2px solid hsl(169, 82%, 27%);
+  outline: 2px solid #007bff;
   outline-offset: 2px;
 }
