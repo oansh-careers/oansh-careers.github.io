@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Counseling Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div class="hero-section">
+        <ul class="background">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+        <div class="hero-content">
+            <h1>Welcome to Your Career Compass</h1>
+            <h2>Helping You Navigate Your Future with Expert Guidance</h2>
+            <p>Not sure which career path to choose? We here to help you make informed decisions about universities, 
+                courses, and career opportunities. Book an appointment today and take the next step toward your future.</p>
+            <button id="bookNowBtn" class="cta-button">Book An Appoitmnent Now</button>
+        </div>
+        
+    </div>
+    
+    <!-- Info Section -->
+    <div class="info-section">
+        <h2>Why Choose Us?</h2>
+        <div class="info-cards">
+            <div class="card">
+                <i class="fas fa-user-graduate fa-3x" style="color: #6a11cb;"></i>
+                <h3>📌 Personalized Career Counseling</h3>
+                <p>Get tailored advice on career options, subject selection, and future opportunities based on your skills and interests.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-university fa-3x" style="color: #6a11cb;"></i>
+                <h3>🎓 University & Course Selection</h3>
+                <p>Receive guidance on application processes, personal statements, and scholarship opportunities to maximize your chances.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-handshake fa-3x" style="color: #6a11cb;"></i>
+                <h3>💡 Application & Scholarship Support</h3>
+                <p>Receive guidance on application processes, personal statements, and scholarship opportunities to maximize your chances.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section" id="formSection">
+        <div class="container">
+            <h2>Book Your Appointment</h2>
+            <form method="post" action="" name="booking-form">
+                <!-- Personal Details Section -->
+                <div class="form-section-group">
+                    <h3>Personal Details</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="class">Class/Grade:</label>
+                            <input type="text" id="class" name="Class" placeholder="Enter your class or grade" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number:</label>
+                            <input type="text" id="mobile" name="Mobile" placeholder="Enter your mobile number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educational Details Section -->
+                <div class="form-section-group">
+                    <h3>Educational Details</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="country">Country you wish to study in:</label>
+                            <input type="text" id="country" name="Country" placeholder="Country of study" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Preferred Course:</label>
+                            <input type="text" id="course" name="Course" placeholder="e.g., Computer Science, Business, Medicine" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Foundation Year:</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="FoundationYear" value="Yes"> Yes</label>
+                                <label><input type="radio" name="FoundationYear" value="No"> No</label>
+                                <label><input type="radio" name="FoundationYear" value="Not Sure"> Not Sure</label>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="subjects">Subjects you are studying:</label>
+                            <textarea id="subjects" name="Subjects" rows="4" placeholder="List your current subjects (e.g., Math, Physics, Chemistry)" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Information Section (Optional) -->
+                <div class="form-section-group">
+                    <h3>Additional Information (Optional)</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="additionalInfo">Anything else you'd like to share?</label>
+                            <textarea id="additionalInfo" name="AdditionalInfo" rows="4" placeholder="Enter any additional information"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success -->
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>🎉 Success!</h2>
+            <p>Your appointment has been booked successfully! A counselor will contact you shortly.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024/25 Careers Committee. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
