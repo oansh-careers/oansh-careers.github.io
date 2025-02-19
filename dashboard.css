@@ -1,0 +1,108 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Container Styles --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px; /* Add margin to prevent content from overlapping the title */
+}
+
+/* --- Title --- */
+h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    font-weight: 700;
+    letter-spacing: -1px;
+    position: fixed; /* Fix the title at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f0f4f8; /* Match the background color */
+    padding: 20px 0;
+    margin: 0;
+    z-index: 1000; /* Ensure the title stays above other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* --- Loading Message --- */
+#loading {
+    font-size: 18px;
+    color: #4a90e2;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+/* --- Cards Wrapper (Grid Layout) --- */
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* --- Individual Card Styles --- */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    justify-items: start;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Card Content --- */
+.card h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #555;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.card p strong {
+    color: #333;
+    font-weight: 500;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 28px;
+        padding: 15px 0; /* Adjust padding for smaller screens */
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
