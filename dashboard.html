@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointments Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for the trash icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Appointments Dashboard</h1>
         <p id="loading">Loading appointments...</p>
+        
+        <!-- Tabs for filtering -->
+        <div class="tabs">
+            <button class="tab-button active" data-status="all">All</button>
+            <button class="tab-button" data-status="pending">Pending</button>
+            <button class="tab-button" data-status="scheduled">Scheduled</button>
+            <button class="tab-button" data-status="follow-on">Follow-On</button>
+            <button class="tab-button" data-status="completed">Completed</button>
+            <button class="tab-button" data-status="deleted">Deleted</button>
+        </div>
+
         <div class="cards-wrapper" id="card-container"></div>
     </div>
 
-    <div id="confirmation-popup" class="popup">
+    <div class="popup" id="confirmation-popup"  style="display:none;">
         <div class="popup-content">
-            <p>Are you sure you want to mark this appointment as completed?</p>
+            <p>Are you sure you want to delete this appointment?</p>
             <button id="confirm-yes">Yes</button>
             <button id="confirm-no">No</button>
         </div>
     </div>
 
-    <script src="dashboard.js"></script>
+    <!-- Confirmation Popup for Completion -->
+    <div id="completion-popup" style="display:none;">
+        <p>Appointment marked as completed.</p>
+        <button id="confirm-completion-ok">OK</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
