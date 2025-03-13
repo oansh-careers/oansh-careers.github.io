@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (isValidUser ) {
             // Redirect to the main page
-            window.location.href = "index.html"; // Change to your main page URL
+            window.location.href = "dashboard.html"; // Change to your main page URL
         } else {
             // Show error message
             document.getElementById("error-message").textContent = "Invalid username or password.";
