@@ -1,0 +1,50 @@
+body {
+    background-color: #807AEC;
+    margin: 0;
+    padding: 20px;
+}
+
+#login-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px rgba(255, 255, 255, 255);
+    max-width: 300px;
+    margin: auto;
+    height: 300px;
+    margin-top: 20%;
+}
+h2{
+    font-size: 30px;
+    margin-left: 35%;
+    font-family: 'Inter', sans-serif;
+}
+.label{
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 10px;
+    font-size: 18.5px;
+}
+.input{
+    margin-bottom: 10px;
+    border: none;
+    font-size: 18.5px;
+}
+.submit{
+    margin-left: 35%;
+    margin-top: 10%;
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: #f4f4f4;
+    font-family: 'Inter', sans-serif;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+}
+#main-content {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
